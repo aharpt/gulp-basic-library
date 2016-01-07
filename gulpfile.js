@@ -10,7 +10,7 @@ gulp.task("hello", function(){
 });		
 
 gulp.task('concatScripts', function() {
-	return gulp.src(['src/scripts.js', 'src/jquery.js'])
+	return gulp.src('src/*.js')	
 .pipe(gulpConcat('production.js'))
 .pipe(gulp.dest('js'));
 });
