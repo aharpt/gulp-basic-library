@@ -16,6 +16,12 @@ gulp.task('concatScripts', function() {
 .pipe(gulp.dest('js'));
 });
 
+gulp.task('minifyScripts', function(){
+return gulp.src("*.js")
+.pipe(gulpMinify())
+.pipe(gulp.dest("js"));
+});
+
 gulp.task("compileSass", function(){
 gulp.src("src/main.scss")
 .pipe(sass())
