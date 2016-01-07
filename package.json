@@ -1,0 +1,25 @@
+{
+  "name": "basic-gulp-framework",
+  "version": "1.0.0",
+  "description": "basic gulp framework",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AaronMatthewHarpt/gulp-project.git"
+  },
+  "keywords": [
+    "[\"gulp\"",
+    "\"framework\"]"
+  ],
+  "author": "Aaron Harpt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AaronMatthewHarpt/gulp-project/issues"
+  },
+  "homepage": "https://github.com/AaronMatthewHarpt/gulp-project#readme"
+}
