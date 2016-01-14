@@ -5,6 +5,7 @@ var gulpConcat = require("gulp-concat");
 var gulpMinify = require("gulp-uglify");
 var sass = require("gulp-sass");
 var rename = require("gulp-rename");
+var sourcemaps = require("gulp-sourcemaps");
 
 gulp.task("hello", function(){
 	console.log("hello");
@@ -25,7 +26,9 @@ gulp.task("minifyScripts", function(){
 
 gulp.task("compileSass", function(){
 gulp.src("src/main.scss")
+.pipe(sourcemaps.init())
 .pipe(sass())
+.pipe(sourcemaps.write("./"))
 .pipe(gulp.dest("css"));
 });
 
