@@ -4,7 +4,7 @@ var gulp = require("gulp");
 var gulpConcat = require("gulp-concat");
 var gulpMinify = require("gulp-uglify");
 var sass = require("gulp-sass");
-	
+var rename = require("gulp-rename");
 
 gulp.task("hello", function(){
 	console.log("hello");
@@ -16,10 +16,11 @@ gulp.task('concatScripts', function() {
 .pipe(gulp.dest('js'));
 });
 
-gulp.task('minifyScripts', function(){
-return gulp.src("*.js")
-.pipe(gulpMinify())
-.pipe(gulp.dest("js"));
+gulp.task("minifyScripts", function(){
+	return gulp.src('js/production.js')
+	.pipe(gulpMinify())
+	.pipe(rename("production.min.js"))
+	.pipe(gulp.dest('production'));		
 });
 
 gulp.task("compileSass", function(){
@@ -28,6 +29,6 @@ gulp.src("src/main.scss")
 .pipe(gulp.dest("css/main.css"));
 });
 
-gulp.task("default", ["hello","concatScripts", "compileSass"], function(){
+gulp.task("default", ["hello","concatScripts", "minifyScripts","compileSass"], function(){
 	console.log("default task");
 });
