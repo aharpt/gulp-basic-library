@@ -7,6 +7,8 @@ var sass = require("gulp-sass");
 var rename = require("gulp-rename");
 var sourcemaps = require("gulp-sourcemaps");
 var clean = require("del");
+var reload = require("gulp-livereload");
+
 
 gulp.task("hello", function(){
 	console.log("hello");
