@@ -26,7 +26,7 @@ gulp.task("minifyScripts", function(){
 gulp.task("compileSass", function(){
 gulp.src("src/main.scss")
 .pipe(sass())
-.pipe(gulp.dest("css/main.css"));
+.pipe(gulp.dest("css"));
 });
 
 gulp.task("default", ["hello","concatScripts", "minifyScripts","compileSass"], function(){
