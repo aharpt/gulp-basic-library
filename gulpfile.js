@@ -13,7 +13,9 @@ gulp.task("hello", function(){
 
 gulp.task('concatScripts', function() {
 	return gulp.src('src/*.js')	
+	.pipe(sourcemaps.init())
 .pipe(gulpConcat('production.js'))
+.pipe(sourcemaps.write("./"))
 .pipe(gulp.dest('js'));
 });
 
