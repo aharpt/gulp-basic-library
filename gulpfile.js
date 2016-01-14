@@ -34,7 +34,7 @@ gulp.src("src/main.scss")
 .pipe(sourcemaps.write("./"))
 .pipe(gulp.dest("css"));
 });
-	
+		
 gulp.task("watchFiles", function(){
 	gulp.watch("src/*.scss", ["compileSass"]);
 	gulp.watch("js/production.js", ["concatScripts"]);
