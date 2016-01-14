@@ -4,6 +4,7 @@ var gulp = require("gulp");
 var gulpConcat = require("gulp-concat");
 var gulpMinify = require("gulp-uglify");
 var sass = require("gulp-sass");
+var rename = require("gulp-rename");
 
 
 gulp.task("hello", function(){
@@ -19,6 +20,7 @@ gulp.task('concatScripts', function() {
 gulp.task("minifyScripts", function(){
 	return gulp.src('js/production.js')
 	.pipe(gulpMinify())
+	.pipe(rename("production.min.js"))
 	.pipe(gulp.dest('production'));
 });
 
