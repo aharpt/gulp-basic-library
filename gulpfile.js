@@ -16,6 +16,15 @@ gulp.task("browsersync", function() {
 });
 });
 
+gulp.task("serve", ["compileSass"], function() {
+	browsersync.init({
+		server: "./"
+});
+	gulp.watch("gulp/src/main.scss", ["compileSass"]);
+	gulp.watch("gulp/*.html").on("change", browsersync.reload);
+	
+});
+
 gulp.task("hello", function(){
 	console.log("hello");
 });		
@@ -41,6 +50,7 @@ gulp.src("src/main.scss")
 .pipe(sass())	
 .pipe(sourcemaps.write("./"))
 .pipe(gulp.dest("css"))
+.pipe(browsersync.stream());
 });
 		
 gulp.task("watch", function(){
