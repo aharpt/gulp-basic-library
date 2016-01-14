@@ -7,7 +7,6 @@ var sass = require("gulp-sass");
 var rename = require("gulp-rename");
 var sourcemaps = require("gulp-sourcemaps");
 var clean = require("del");
-var reload = require("gulp-livereload");
 
 
 gulp.task("hello", function(){
@@ -34,7 +33,7 @@ gulp.src("src/main.scss")
 .pipe(sourcemaps.init())
 .pipe(sass())	
 .pipe(sourcemaps.write("./"))
-.pipe(gulp.dest("css"));
+.pipe(gulp.dest("css"))
 });
 		
 gulp.task("watch", function(){
