@@ -8,6 +8,7 @@ var rename = require("gulp-rename");
 var sourcemaps = require("gulp-sourcemaps");
 var clean = require("del");
 var browsersync = require("browser-sync").create();
+var autoprefixer = require("gulp-autoprefixer");
 
 
 gulp.task("browsersync", function() {
@@ -49,6 +50,7 @@ gulp.task("minifyScripts", ["concatScripts"], function(){
 gulp.task("compileSass", function(){
 gulp.src("src/main.scss")
 .pipe(sourcemaps.init())
+.pipe(autoprefixer())
 .pipe(sass())	
 .pipe(sourcemaps.write("./"))
 .pipe(gulp.dest("css"))
