@@ -29,7 +29,7 @@ gulp.task("minifyScripts", function(){
 gulp.task("compileSass", function(){
 gulp.src("src/main.scss")
 .pipe(sourcemaps.init())
-.pipe(sass())
+.pipe(sass())	
 .pipe(sourcemaps.write("./"))
 .pipe(gulp.dest("css"));
 });
