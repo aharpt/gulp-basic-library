@@ -21,7 +21,7 @@ gulp.task("minifyScripts", function(){
 	return gulp.src('js/production.js')
 	.pipe(gulpMinify())
 	.pipe(rename("production.min.js"))
-	.pipe(gulp.dest('production'));	
+	.pipe(gulp.dest('production'));		
 });
 
 gulp.task("compileSass", function(){
