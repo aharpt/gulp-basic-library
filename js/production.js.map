@@ -1,0 +1,1 @@
+{"version":3,"sources":["jquery.js","scripts.js"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;ACJA;AACA;AACA","file":"production.js","sourcesContent":["var name = \"Aaron\";\t\ndocument.write(name);\n\n\nvar foo = bar;","var name = \n\n\"Aaron\";"],"sourceRoot":"/source/"}
