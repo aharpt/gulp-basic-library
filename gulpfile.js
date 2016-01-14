@@ -37,10 +37,10 @@ gulp.src("src/main.scss")
 gulp.task("watchSass", function(){
 	gulp.watch("src/*.scss", ["compileSass"]);
 });
-gulp.task("build", ["hello", "concatScripts", "minifyScripts", "compileSass"], function() {
-	return gulp.src(["css/main.css", "production/production.min.js", "index.html", "img/**", "fonts/**"])
+gulp.task("build", ["hello", "concatScripts", "minifyScripts", "compileSass", "watchSass"], function() {
+	return gulp.src(["css/main.css", "production/production.min.js", "index.html", "img/**", "fonts/**"], {base: "./"})
 	.pipe(gulp.dest("dist"));
 });
 
-
 gulp.task("default", ["build"]);
+
