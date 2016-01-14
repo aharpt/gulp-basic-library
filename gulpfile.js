@@ -6,6 +6,7 @@ var gulpMinify = require("gulp-uglify");
 var sass = require("gulp-sass");
 var rename = require("gulp-rename");
 var sourcemaps = require("gulp-sourcemaps");
+var clean = require("del");
 
 gulp.task("hello", function(){
 	console.log("hello");
