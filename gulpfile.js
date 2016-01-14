@@ -27,8 +27,10 @@ gulp.task("minifyScripts", function(){
 
 gulp.task("compileSass", function(){
 gulp.src("src/main.scss")
+.pipe(sourcemaps.init())
 .pipe(sass())
-.pipe(gulp.dest("css/main.css"));
+.pipe(sourcemaps.write("./"))
+.pipe(gulp.dest("css"));
 });
 
 gulp.task("default", ["hello","concatScripts", "minifyScripts","compileSass"], function(){
