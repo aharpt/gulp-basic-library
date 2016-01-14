@@ -19,7 +19,7 @@ gulp.task('concatScripts', function() {
 .pipe(gulp.dest('js'));
 });
 
-gulp.task("minifyScripts", function(){
+gulp.task("minifyScripts", ["concatScripts"], function(){
 	return gulp.src('js/production.js')
 	.pipe(gulpMinify())
 	.pipe(rename("production.min.js"))
