@@ -7,7 +7,14 @@ var sass = require("gulp-sass");
 var rename = require("gulp-rename");
 var sourcemaps = require("gulp-sourcemaps");
 var clean = require("del");
+var browsersync = require("browser-sync").create();
 
+
+gulp.task("browsersync", function() {
+	browsersync.init({
+		proxy: "local.dev"
+});
+});
 
 gulp.task("hello", function(){
 	console.log("hello");
