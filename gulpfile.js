@@ -51,7 +51,7 @@ gulp.task("compileSass", function(){
 gulp.src("src/main.scss")
 .pipe(sourcemaps.init())
 .pipe(autoprefixer())
-.pipe(sass())	
+.pipe(sass())		
 .pipe(sourcemaps.write("./"))
 .pipe(gulp.dest("css"))
 .pipe(browsersync.stream());
