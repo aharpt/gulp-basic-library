@@ -20,8 +20,8 @@ gulp.task("serve", ["compileSass"], function() {
 	browsersync.init({
 		server: "./"
 });
-	gulp.watch("gulp/src/main.scss", ["compileSass"]);
-	gulp.watch("gulp/*.html").on("change", browsersync.reload);
+	gulp.watch("./src/main.scss", ["compileSass"]);
+	gulp.watch("./*.html").on("change", browsersync.reload);
 	
 });
 
@@ -31,16 +31,18 @@ gulp.task("hello", function(){
 
 gulp.task('concatScripts', function() {
 	return gulp.src('src/*.js')	
-	.pipe(sourcemaps.init())
+	 .pipe(sourcemaps.init())
 .pipe(gulpConcat('production.js'))
-.pipe(sourcemaps.write("./"))
+ .pipe(sourcemaps.write("./"))
 .pipe(gulp.dest('js'));
 });
 
 gulp.task("minifyScripts", ["concatScripts"], function(){
 	return gulp.src('js/production.js')
+	// .pipe(sourcemaps.init())
 	.pipe(gulpMinify())
 	.pipe(rename("production.min.js"))
+	// .pipe(sourcemaps.write("./"))
 	.pipe(gulp.dest('production'));		
 });
 
