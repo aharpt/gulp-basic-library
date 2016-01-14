@@ -35,6 +35,10 @@ gulp.src("src/main.scss")
 .pipe(gulp.dest("css"));
 });
 
+gulp.task("watchSass", function(){
+	gulp.watch("src/*.scss", ["compileSass"]);
+});
+
 gulp.task("default", ["hello","concatScripts", "minifyScripts","compileSass"], function(){
 	console.log("default task");
 });
