@@ -1,1 +1,0 @@
-{"version":3,"file":"main.css","sources":["main.scss","_hello.scss"],"sourcesContent":["@import \"_hello.scss\";\n\n$green: green;\nh1 {\n\tcolor: $green;\n}\n","h2 {\n\tfont-size: 100%;\n}"],"mappings":"ACAA,EAAE,CAAC;EACF,SAAS,EAAE,IAAK,GAChB;;ADCD,EAAE,CAAC;EACF,KAAK,EAFE,KAAK,GAGZ","names":[],"sourceRoot":"/source/"}

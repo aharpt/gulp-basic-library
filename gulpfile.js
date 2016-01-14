@@ -38,6 +38,11 @@ gulp.src("src/main.scss")
 gulp.task("watchSass", function(){
 	gulp.watch("src/*.scss", ["compileSass"]);
 });
+
+gulp.task("clean", function() {
+	clean(["dist", "css/main.css", "css/main.css.map", "js/production.js", "production/production.min.js", "js/production.js.map"]);
+})
+
 gulp.task("build", ["hello", "concatScripts", "minifyScripts", "compileSass", "watchSass"], function() {
 	return gulp.src(["css/main.css", "production/production.min.js", "index.html", "img/**", "fonts/**"], {base: "./"})
 	.pipe(gulp.dest("dist"));
