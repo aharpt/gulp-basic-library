@@ -50,7 +50,7 @@ gulp.src("src/main.scss")
 .pipe(autoprefixer())
 .pipe(sass())		
 .pipe(sourcemaps.write("./"))
-.pipe(gulp.dest("css"))
+.pipe(gulp.dest("css"))	
 .pipe(browsersync.stream());
 });
 		
