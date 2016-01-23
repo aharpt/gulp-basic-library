@@ -10,17 +10,6 @@ var clean = require("del");
 var browsersync = require("browser-sync").create();
 var autoprefixer = require("gulp-autoprefixer");
 
-
-// gulp.task("browsersync", function() {
-// 	browsersync.init({
-// 		proxy: "local.dev"
-// });
-// });
-
-// gulp.task("serve", ["compileSass"], function() {
-// 	browsersync.init({
-// 		server: "./"
-// });
 // 	gulp.watch("./src/main.scss", ["compileSass"]);
 // 	gulp.watch("./*.html").on("change", browsersync.reload);
 	
