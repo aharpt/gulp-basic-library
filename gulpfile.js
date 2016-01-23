@@ -51,33 +51,3 @@ gulp.task("clean", function() {
 gulp.task("default",["clean"], function() {
 	gulp.start("build");
 });
-
-
-
-
-//  var gulp = require("gulp");
-//  var gulpConcat = require("gulp-concat");
-//  var gulpMinify = require("gulp-uglify");
-//  var sourcemaps = require("gulp-sourcemaps");
-//  var rename = require("gulp-rename");
-
-
-
-
-// gulp.task("gulpConcat", function(){
-// 	return gulp.src('src/*.js')	
-//  	.pipe(sourcemaps.init())
-//  	.pipe(gulpConcat('production.js'))
-//   	.pipe(sourcemaps.write("./"))
-//  	.pipe(gulp.dest('js'));
-// });
-
-// gulp.task("gulpMinify", ["gulpConcat"], function(){
-// 	return gulp.src('js/production.js')
-// 	.pipe(sourcemaps.init())
-// 	.pipe(gulpMinify())
-// 	.pipe(rename("production.min.js"))
-// 	.pipe(sourcemaps.write("./"))
-//  	.pipe(gulp.dest('production'));
-// });
-
