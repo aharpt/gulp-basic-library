@@ -20,10 +20,8 @@ gulp.task('concatScripts', function() {
 
 gulp.task("minifyScripts", ["concatScripts"], function(){
 	return gulp.src('js/production.js')
-	    //.pipe(sourcemaps.init())
 	.pipe(gulpMinify())
 	   .pipe(rename("production.min.js"))
-	  // .pipe(sourcemaps.write("./"))
 	 .pipe(gulp.dest("production"));		
 });
 
@@ -34,7 +32,6 @@ gulp.src("src/main.scss")
 .pipe(sass())		
 .pipe(sourcemaps.write("./"))
 .pipe(gulp.dest("css"))	
-// .pipe(browsersync.stream());
 });
 		
 gulp.task("watch", function(){
