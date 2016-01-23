@@ -7,7 +7,6 @@ var sass = require("gulp-sass");
 var rename = require("gulp-rename");
 var sourcemaps = require("gulp-sourcemaps");
 var clean = require("del");
-var browsersync = require("browser-sync").create();
 var autoprefixer = require("gulp-autoprefixer");
 
 // 	gulp.watch("./src/main.scss", ["compileSass"]);
