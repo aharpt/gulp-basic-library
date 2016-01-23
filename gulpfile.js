@@ -9,11 +9,6 @@ var sourcemaps = require("gulp-sourcemaps");
 var clean = require("del");
 var autoprefixer = require("gulp-autoprefixer");
 
-// 	gulp.watch("./src/main.scss", ["compileSass"]);
-// 	gulp.watch("./*.html").on("change", browsersync.reload);
-	
-// });
-
 
 gulp.task('concatScripts', function() {
 	return gulp.src('src/*.js')	
