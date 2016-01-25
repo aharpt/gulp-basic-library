@@ -20,7 +20,7 @@ gulp.task('concatScripts', function() {
 
 gulp.task("minifyScripts", ["concatScripts"], function(){
 	return gulp.src('js/production.js')
-	.pipe(gulpMinify())
+	.pipe(gulpMinify())	
 	 .pipe(gulp.dest("js"));		
 });
 
