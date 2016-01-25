@@ -21,8 +21,7 @@ gulp.task('concatScripts', function() {
 gulp.task("minifyScripts", ["concatScripts"], function(){
 	return gulp.src('js/production.js')
 	.pipe(gulpMinify())
-	   .pipe(rename("production.min.js"))
-	 .pipe(gulp.dest("production"));		
+	 .pipe(gulp.dest("js"));		
 });
 
 gulp.task("compileSass", function(){
