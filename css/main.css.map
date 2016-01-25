@@ -1,1 +1,1 @@
-{"version":3,"sources":["main.scss"],"names":[],"mappings":"AAEA,EAAA,CAAA;EACC,KAAA,EAAA,IAAY;EACZ,OAAA,EAAA,WAAc;EAAd,OAAA,EAAA,YAAc;EAAd,OAAA,EAAA,WAAc;EAAd,OAAA,EAAA,IAAc,GACd","file":"main.css","sourcesContent":["\n$green: green;\nh1 {\n\tcolor: blue;\n\tdisplay: flex;\n}\n"],"sourceRoot":"/source/"}
+{"version":3,"file":"main.css","sources":["main.scss"],"sourcesContent":["\n"],"mappings":"","names":[],"sourceRoot":"/source/"}
