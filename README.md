@@ -25,4 +25,4 @@
 
 #### If you find any issues with the program, you can submit a issue on the github repoitory.
 
-### Run gulp in the root directory of your project to run it
+### Run gulp in the root directory of your project to run the gulp file
