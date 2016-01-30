@@ -19,7 +19,9 @@
 2. main.scss must be in src/ in relation to your gulpfile
 ## For Javascript
 1. All of your files before they are concatenated and minifying into a single file must be in src/ in relation to the gulp file
-2. # NOTE:
+ 
+
+# NOTE:
 #### My folder structure is an example of what your project could look like. It does not need  to be exactly like mine, but the Project Setup instructions are necessary for this to work.
 #### This will only work with versions of gulp under version 4 which is going to be released at some point soon. Here is a link to its progress: https://github.com/gulpjs/gulp/milestones
 
