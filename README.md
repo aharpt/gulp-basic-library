@@ -1,9 +1,9 @@
 # Basic Gulp Starter Theme:
 ## What is included
 ### For CSS/SASS
-#### 1. Compiling and watching your sass, (you don't have to rerun gulp after every sass change)
-#### 2. SASS sourcemaps
-#### 3. Added autoprefixer for advanced CSS features such as flexbox, transitions, etc.
+### 1. Compiling and watching your sass, (you don't have to rerun gulp after every sass change)
+### 2. SASS sourcemaps
+### 3. Added autoprefixer for advanced CSS features such as flexbox, transitions, etc.
 
 ### For Javascript
 ### 1. javascript sourcemaps
