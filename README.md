@@ -1,15 +1,15 @@
 # Basic Gulp Starter Theme:
 ## A ready made gulpfile 
-## Installation
-### 1. Clone project from github
-### 2. Run npm install in the root directory of your project to install all uninstalled node dependancies
-### 3. run gulp in the root directory of your project
+### Installation
+ 1. Clone project from github
+ 2. Run npm install in the root directory of your project to install all uninstalled node dependancies
+3. run gulp in the root directory of your project
 ## Project Setup
 ### For CSS/SASS
-#### 1. You must name your main sass file main.scss
-#### 2. main.scss must be in src/ in relation to your gulpfile
+1. You must name your main sass file main.scss
+2. main.scss must be in src/ in relation to your gulpfile
 ### For Javascript
-#### 1. All of your files before they are concatenated and minifying into a single file must be in src/ in relation to the gulp file
+1. All of your files before they are concatenated and minifying into a single file must be in src/ in relation to the gulp file
 ## What is included
 ### For CSS/SASS
 #### 1. Compiling and watching your sass, (you don't have to rerun gulp after every sass change)
