@@ -1,7 +1,8 @@
 "use strict";
 
-var gulp = require("gulp");
-var plugins = require("gulp-load-plugins")({lazy: false});
+var gulp = require("gulp"),
+ plugins = require("gulp-load-plugins")({lazy: false, pattern: ["*"]
+});
 plugins.gulpConcat = require("gulp-concat");
 plugins.gulpMinify = require("gulp-uglify");
 plugins.sass = require("gulp-sass");
