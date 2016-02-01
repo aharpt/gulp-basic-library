@@ -13,10 +13,12 @@
 ## Installation
 1. Clone project from github
 2. Run npm install in the root directory of your project to install all uninstalled node dependancies
+
 # Project Setup
 ## For CSS/SASS
 1. You must name your main sass file main.scss
 2. main.scss must be in src/ in relation to your gulpfile
+
 ## For Javascript
 1. All of your files before they are concatenated and minifying into a single file must be in src/ in relation to the gulp file
 
