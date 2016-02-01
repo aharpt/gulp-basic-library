@@ -7,9 +7,9 @@ plugins.gulpConcat = require("gulp-concat");
 plugins.sass = require("gulp-sass");
 plugins.rename = require("gulp-rename");
 plugins.sourcemaps = require("gulp-sourcemaps");		
-plugins.clean = require("del");
+plugins.clean = require("del");	
 plugins.autoprefixer = require("gulp-autoprefixer");
-
+	
 
 gulp.task('concatScripts', function() {
 	return gulp.src('src/*.js')	
