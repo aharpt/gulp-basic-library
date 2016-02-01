@@ -1,13 +1,14 @@
 "use strict";
 
 var gulp = require("gulp");
-var gulpConcat = require("gulp-concat");
-var gulpMinify = require("gulp-uglify");
-var sass = require("gulp-sass");
-var rename = require("gulp-rename");
-var sourcemaps = require("gulp-sourcemaps");		
-var clean = require("del");
-var autoprefixer = require("gulp-autoprefixer");
+var plugins = require("gulp-load-plugins").();
+plugins.gulpConcat = require("gulp-concat");
+ plugins.gulpMinify = require("gulp-uglify");
+plugins.sass = require("gulp-sass");
+plugins.rename = require("gulp-rename");
+plugins.sourcemaps = require("gulp-sourcemaps");		
+plugins.clean = require("del");
+plugins.autoprefixer = require("gulp-autoprefixer");
 
 
 gulp.task('concatScripts', function() {
