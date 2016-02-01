@@ -1,9 +1,9 @@
 "use strict";
 
 var gulp = require("gulp");
-var plugins = require("gulp-load-plugins").();
+var plugins = require("gulp-load-plugins")();
 plugins.gulpConcat = require("gulp-concat");
- plugins.gulpMinify = require("gulp-uglify");
+plugins.gulpMinify = require("gulp-uglify");
 plugins.sass = require("gulp-sass");
 plugins.rename = require("gulp-rename");
 plugins.sourcemaps = require("gulp-sourcemaps");		
