@@ -1,16 +1,10 @@
-// "use strict";
+"use strict";
 
 var gulp = require("gulp");
 var plugins = require("gulp-load-plugins")({
 	lazy: false, pattern:"*"
 });
-// var pluginsgulpConcat = require("gulp-concat");
-// var pluginsgulpMinify = require("gulp-uglify");
-// var pluginssass = require("gulp-sass");
-// var pluginsrename = require("gulp-rename");
-// var pluginssourcemaps = require("gulp-sourcemaps");		
 var clean = require("del");	
-// var pluginsautoprefixer = require("gulp-autoprefixer");
 		
 
 gulp.task('concatScripts', function() {
