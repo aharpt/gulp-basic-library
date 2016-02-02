@@ -3,7 +3,7 @@
 
 // requiring gulp and gulp plugins
 var gulp = require("gulp");
-var plugins = require("gulp-load-plugins")();
+var plugins = require("gulp-load-plugins")({DEBUG: true});
 var clean = require("del");	
 		
 // Concat javascript and put into a file named production.js in the js folder
@@ -17,7 +17,9 @@ gulp.task('concatScripts', function() {
 
 gulp.task("minifyScripts", ["concatScripts"], function(){
 	return gulp.src('js/production.js')
+	.pipe(plugins.sourcemaps.init())
 	.pipe(plugins.uglify())	
+	.pipe(plugins.sourcemaps.write("./"))
 	 .pipe(gulp.dest("js"));		
 });
 

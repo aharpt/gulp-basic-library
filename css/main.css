@@ -4,4 +4,10 @@ h1 {
 h1 {
   color: blue; }
 
+h1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
 /*# sourceMappingURL=main.css.map */
