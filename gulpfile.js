@@ -1,37 +1,38 @@
 "use strict";
 
-var gulp = require("gulp"),
- plugins = require("gulp-load-plugins")({lazy: false, pattern: ["*"]
+var gulp = require("gulp");
+var plugins = require("gulp-load-plugins")({
+	lazy: false, pattern:"*"
 });
-plugins.gulpConcat = require("gulp-concat");
-plugins.gulpMinify = require("gulp-uglify");
-plugins.sass = require("gulp-sass");
-plugins.rename = require("gulp-rename");
-plugins.sourcemaps = require("gulp-sourcemaps");		
-plugins.clean = require("del");	
-plugins.autoprefixer = require("gulp-autoprefixer");
+var pluginsgulpConcat = require("gulp-concat");
+var pluginsgulpMinify = require("gulp-uglify");
+var pluginssass = require("gulp-sass");
+var pluginsrename = require("gulp-rename");
+var pluginssourcemaps = require("gulp-sourcemaps");		
+var pluginsclean = require("del");	
+var pluginsautoprefixer = require("gulp-autoprefixer");
 		
 
 gulp.task('concatScripts', function() {
 	return gulp.src('src/*.js')	
-	  .pipe(sourcemaps.init())
-.pipe(gulpConcat('production.js'))
-  .pipe(sourcemaps.write("./"))
+	  .pipe(plugins.sourcemaps.init())
+.pipe(pluginsgulpConcat('production.js'))
+  .pipe(plugins.sourcemaps.write("./"))
 .pipe(gulp.dest('js'));
 });
 
 gulp.task("minifyScripts", ["concatScripts"], function(){
 	return gulp.src('js/production.js')
-	.pipe(gulpMinify())	
+	.pipe(pluginsgulpMinify())	
 	 .pipe(gulp.dest("js"));		
 });
 
 gulp.task("compileSass", function(){
 gulp.src("src/main.scss")
-.pipe(sourcemaps.init())
-.pipe(autoprefixer())
-.pipe(sass())		
-.pipe(sourcemaps.write("./"))
+.pipe(plugins.sourcemaps.init())
+.pipe(plugins.autoprefixer())
+.pipe(plugins.sass())		
+.pipe(plugins.sourcemaps.write("./"))
 .pipe(gulp.dest("css"));	
 });
 		
@@ -41,7 +42,7 @@ gulp.task("watch", function(){
 });
 
 gulp.task("clean", function() {
-	clean(["dist", "css/main.css", "js/production.js*", "production/production.min.js"]);
+	pluginsclean(["dist", "css/main.css", "js/production.js*", "production/production.min.js"]);
 });
 
  gulp.task("build", [ "concatScripts", "minifyScripts", "compileSass", "watch"], function() {
