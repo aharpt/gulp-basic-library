@@ -1,15 +1,17 @@
 // "use strict";
 
+
+// requiring gulp and gulp plugins
 var gulp = require("gulp");
 var plugins = require("gulp-load-plugins")({
 	lazy: false, pattern:"*"
 });
 var clean = require("del");	
 		
-
+// Concat javascript and put into a file named production.js in the js folder
 gulp.task('concatScripts', function() {
 	return gulp.src('src/*.js')	
-	  .pipe(plugins.sourcemaps.init())
+	  .pipe(plugins.maps.init())
 .pipe(plugins.concat('production.js'))
   .pipe(plugins.sourcemaps.write("./"))
 .pipe(gulp.dest('js'));
@@ -23,10 +25,10 @@ gulp.task("minifyScripts", ["concatScripts"], function(){
 
 gulp.task("compileSass", function(){
 gulp.src("src/main.scss")
-.pipe(plugins.sourcemaps.init())
+.pipe(plugins.maps.init())
 .pipe(plugins.autoprefixer())
 .pipe(plugins.sass())		
-.pipe(plugins.sourcemaps.write("./"))
+.pipe(plugins.maps.write("./"))
 .pipe(gulp.dest("css"));	
 });
 		

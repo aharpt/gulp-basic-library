@@ -1,1 +1,1 @@
-{"version":3,"file":"main.css","sources":["main.scss"],"sourcesContent":["\n"],"mappings":"","names":[],"sourceRoot":"/source/"}
+{"version":3,"sources":["main.scss"],"names":[],"mappings":"AAAA,EAAA,CAAA;EACC,KAAA,EAAA,KAAa,GACb","file":"main.css","sourcesContent":["h1 {\n\tcolor: green;\n}\n"],"sourceRoot":"/source/"}
