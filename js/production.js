@@ -1,2 +1,3 @@
-var name="Aaron",nam=hello;
+var name = "Aaron";
+var nam = hello;
 //# sourceMappingURL=production.js.map
