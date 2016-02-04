@@ -33,7 +33,7 @@ gulp.src("src/main.scss")
 .pipe(gulp.dest("css"));	
 });
 		
-gulp.task("watch", function(){
+gulp.task("watch",["compileSass", "minifyScripts", "concatScripts"], function(){
 	gulp.watch("src/main.scss", ["compileSass"]);
 	gulp.watch("js/production.js", ["concatScripts"]);
 });
