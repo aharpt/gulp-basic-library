@@ -5,6 +5,7 @@
 var gulp = require("gulp");
 var plugins = require("gulp-load-plugins")({DEBUG: true});
 var clean = require("del");	
+var browsersync = require("browser-sync");
 		
 // Concat javascript and put into a file named production.js in the js folder
 gulp.task('concatScripts', function() {
