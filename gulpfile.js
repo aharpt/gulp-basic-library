@@ -30,12 +30,17 @@ gulp.src("src/main.scss")
 .pipe(plugins.autoprefixer())
 .pipe(plugins.sass())		
 .pipe(plugins.sourcemaps.write("./"))
-.pipe(gulp.dest("css"));	
+.pipe(gulp.dest("css"))
+.pipe(browsersync.stream());	
 });
 		
 gulp.task("watch",["compileSass", "minifyScripts", "concatScripts"], function(){
+	browsersync.init({
+		server: "./"
+		});
 	gulp.watch("src/main.scss", ["compileSass"]);
 	gulp.watch("js/production.js", ["concatScripts"]);
+	gulp.watch("./*.html").on("change", browsersync.reload);
 });
 
 gulp.task("clean", function() {
