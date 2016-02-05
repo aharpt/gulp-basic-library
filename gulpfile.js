@@ -15,7 +15,7 @@ gulp.task('concatScripts', function() {
   .pipe(plugins.sourcemaps.write("./"))
 .pipe(gulp.dest('js'));
 });
-
+// minify javascript and put into a keep it at production.js in the js folder
 gulp.task("minifyScripts", ["concatScripts"], function(){
 	return gulp.src('js/production.js')
 	.pipe(plugins.sourcemaps.init())
@@ -24,17 +24,21 @@ gulp.task("minifyScripts", ["concatScripts"], function(){
 	 .pipe(gulp.dest("js"));		
 });
 
+// compile sass Automatically
 gulp.task("compileSass", function(){
 gulp.src("src/main.scss")
 .pipe(plugins.sourcemaps.init())
+// autoprefixer to add prefixes for older browsers
 .pipe(plugins.autoprefixer())
 .pipe(plugins.sass())		
 .pipe(plugins.sourcemaps.write("./"))
 .pipe(gulp.dest("css"))
+// allows automatic css injecting
 .pipe(browsersync.stream());	
 });
-		
+// watch task to watch for changes to css, js, html	
 gulp.task("watch",["compileSass", "minifyScripts", "concatScripts"], function(){
+	// add browsersync  local server
 	browsersync.init({
 		server: "./"
 		});
