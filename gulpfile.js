@@ -1,6 +1,3 @@
-// "use strict";
-
-
 // requiring gulp and gulp plugins
 var gulp = require("gulp");
 var plugins = require("gulp-load-plugins")({DEBUG: true});
@@ -15,6 +12,7 @@ gulp.task('concatScripts', function() {
   .pipe(plugins.sourcemaps.write("./"))
 .pipe(gulp.dest('js'));
 });
+
 // minify javascript and put into a keep it at production.js in the js folder
 gulp.task("minifyScripts", ["concatScripts"], function(){
 	return gulp.src('js/production.js')
@@ -36,14 +34,17 @@ gulp.src("src/main.scss")
 // allows automatic css injecting
 .pipe(browsersync.stream());	
 });
+
 // watch task to watch for changes to css, js, html	
 gulp.task("watch",["compileSass", "minifyScripts", "concatScripts"], function(){
-	// add browsersync  local server
+	// browsersync
 	browsersync.init({
 		server: "./"
 		});
+	// watch sass/js for changes
 	gulp.watch("src/main.scss", ["compileSass"]);
 	gulp.watch("js/production.js", ["concatScripts"]);
+	// watch html for changes to inject in browsersync
 	gulp.watch("./*.html").on("change", browsersync.reload);
 });
 
@@ -52,8 +53,7 @@ gulp.task("clean", function() {
 });
 
  gulp.task("build", [ "concatScripts", "minifyScripts", "compileSass", "watch"], function() {
-// 	return gulp.src(["css/main.css", "js/production.js", "index.html", "img/**", "fonts/**"], {base: "./"})
-// 	.pipe(gulp.dest("dist"));
+
  });
 	
 gulp.task("default",["clean"], function() {
