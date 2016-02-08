@@ -12,6 +12,7 @@ gulp.task('concatScripts', function() {
   .pipe(plugins.sourcemaps.write("./"))
 .pipe(gulp.dest('js'));
 });
+
 // minify javascript and put into a keep it at production.js in the js folder
 gulp.task("minifyScripts", ["concatScripts"], function(){
 	return gulp.src('js/production.js')
