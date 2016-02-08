@@ -41,8 +41,10 @@ gulp.task("watch",["compileSass", "minifyScripts", "concatScripts"], function(){
 	browsersync.init({
 		server: "./"
 		});
+	// watch sass/js for changes
 	gulp.watch("src/main.scss", ["compileSass"]);
 	gulp.watch("js/production.js", ["concatScripts"]);
+	// watch html for changes to inject in browsersync
 	gulp.watch("./*.html").on("change", browsersync.reload);
 });
 
