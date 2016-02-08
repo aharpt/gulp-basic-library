@@ -37,7 +37,7 @@ gulp.src("src/main.scss")
 
 // watch task to watch for changes to css, js, html	
 gulp.task("watch",["compileSass", "minifyScripts", "concatScripts"], function(){
-	// add browsersync  local server
+	// browsersync
 	browsersync.init({
 		server: "./"
 		});
