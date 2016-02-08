@@ -53,8 +53,7 @@ gulp.task("clean", function() {
 });
 
  gulp.task("build", [ "concatScripts", "minifyScripts", "compileSass", "watch"], function() {
-// 	return gulp.src(["css/main.css", "js/production.js", "index.html", "img/**", "fonts/**"], {base: "./"})
-// 	.pipe(gulp.dest("dist"));
+
  });
 	
 gulp.task("default",["clean"], function() {
