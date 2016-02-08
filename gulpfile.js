@@ -1,4 +1,4 @@
-// "use strict";
+
 
 
 // requiring gulp and gulp plugins
