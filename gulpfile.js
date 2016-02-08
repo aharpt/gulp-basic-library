@@ -34,6 +34,7 @@ gulp.src("src/main.scss")
 // allows automatic css injecting
 .pipe(browsersync.stream());	
 });
+
 // watch task to watch for changes to css, js, html	
 gulp.task("watch",["compileSass", "minifyScripts", "concatScripts"], function(){
 	// add browsersync  local server
