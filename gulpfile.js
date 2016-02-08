@@ -1,6 +1,3 @@
-
-
-
 // requiring gulp and gulp plugins
 var gulp = require("gulp");
 var plugins = require("gulp-load-plugins")({DEBUG: true});
