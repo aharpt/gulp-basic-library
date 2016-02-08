@@ -10,6 +10,11 @@
 2. javascript concatenation
 3. javascript minification
 
+### Browsersync
+1. automatically creates a web server to view your site
+2. automatically updates your page when sass changes are made
+3. automatically updates your page when html changes are made
+
 ## Installation
 1. Clone project from github
 2. Run npm install in the root directory of your project to install all uninstalled node dependancies
