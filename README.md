@@ -16,8 +16,11 @@
 3. automatically updates your page when html changes are made
 
 ## Installation
+1. Make sure git is installed ("git --version") if not you can look at this link https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+1. Make sure node and npm are installed by running "node --version" and "npm --version"
+(Install node.js and npm with "brew install node" if necessary.)
 1. Clone project from github
-2. Run npm install in the root directory of your project to install all uninstalled node dependancies
+2. Run "npm install" in the root directory of your project to install all uninstalled node dependancies
 
 ## Project Setup
 ### For CSS/SASS
