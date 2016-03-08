@@ -6,9 +6,8 @@
  3. Added autoprefixer for advanced CSS features such as flexbox, transitions, etc.
 
 ### For Javascript
-1. javascript sourcemaps
-2. javascript concatenation
-3. javascript minification
+1. javascript concatenation
+2. javascript minification
 
 ### Browsersync
 1. automatically creates a web server to view your site
