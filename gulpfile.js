@@ -32,18 +32,19 @@ gulp.src("src/main.scss")
 .pipe(plugins.sourcemaps.write("./"))
 .pipe(gulp.dest("css"))
 // allows automatic css injecting
-.pipe(plugins.livereload());
+.pipe(plugins.livereload({start: true}));
 });
 
 // watch task to watch for changes to css, js, html
 gulp.task("watch",["compileSass", "minifyScripts", "concatScripts"], function(){
 	// browsersync
-	plugins.livereload.listen();
+	plugins.livereload.listen({port: 4000});
 	// watch sass/js for changes
 	gulp.watch("src/main.scss", ["compileSass"]);
 	gulp.watch("js/production.js", ["concatScripts"]);
 	// watch html for changes to inject in browsersync
 	gulp.watch("./*.html");
+	plugins.livereload.changed("./", 3000);
 });
 
 gulp.task("clean", function() {
