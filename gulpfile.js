@@ -1,7 +1,9 @@
 // requiring gulp and gulp plugins
 var gulp = require("gulp");
 var plugins = require("gulp-load-plugins")({DEBUG: true});
-var clean = require("del");	
+var clean = require("del");
+var gulp-livereload = ("gulp-livereload");
+livereload({ start: true })
 
 // Concat javascript and put into a file named production.js in the js folder
 gulp.task('concatScripts', function() {
@@ -31,20 +33,18 @@ gulp.src("src/main.scss")
 .pipe(plugins.sourcemaps.write("./"))
 .pipe(gulp.dest("css"))
 // allows automatic css injecting
-.pipe(browsersync.stream());
+.pipe(livereload());
 });
 
 // watch task to watch for changes to css, js, html
 gulp.task("watch",["compileSass", "minifyScripts", "concatScripts"], function(){
 	// browsersync
-	browsersync.init({
-		server: "./"
-		});
+	livereload.listen();
 	// watch sass/js for changes
 	gulp.watch("src/main.scss", ["compileSass"]);
 	gulp.watch("js/production.js", ["concatScripts"]);
 	// watch html for changes to inject in browsersync
-	gulp.watch("./*.html").on("change", browsersync.reload);
+	gulp.watch("./*.html");
 });
 
 gulp.task("clean", function() {
