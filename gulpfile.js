@@ -2,11 +2,10 @@
 var gulp = require("gulp");
 var plugins = require("gulp-load-plugins")({DEBUG: true});
 var clean = require("del");	
-var browsersync = require("browser-sync");
-		
+
 // Concat javascript and put into a file named production.js in the js folder
 gulp.task('concatScripts', function() {
-	return gulp.src('src/*.js')	
+	return gulp.src('src/*.js')
 	  .pipe(plugins.sourcemaps.init())
 .pipe(plugins.concat('production.js'))
   .pipe(plugins.sourcemaps.write("./"))
@@ -17,9 +16,9 @@ gulp.task('concatScripts', function() {
 gulp.task("minifyScripts", ["concatScripts"], function(){
 	return gulp.src('js/production.js')
 	// .pipe(plugins.sourcemaps.init())
-	.pipe(plugins.uglify())	
+	.pipe(plugins.uglify())
 	// .pipe(plugins.sourcemaps.write("./"))
-	 .pipe(gulp.dest("js"));		
+	 .pipe(gulp.dest("js"));
 });
 
 // compile sass Automatically
@@ -28,14 +27,14 @@ gulp.src("src/main.scss")
 .pipe(plugins.sourcemaps.init())
 // autoprefixer to add prefixes for older browsers
 .pipe(plugins.autoprefixer())
-.pipe(plugins.sass())		
+.pipe(plugins.sass())
 .pipe(plugins.sourcemaps.write("./"))
 .pipe(gulp.dest("css"))
 // allows automatic css injecting
-.pipe(browsersync.stream());	
+.pipe(browsersync.stream());
 });
 
-// watch task to watch for changes to css, js, html	
+// watch task to watch for changes to css, js, html
 gulp.task("watch",["compileSass", "minifyScripts", "concatScripts"], function(){
 	// browsersync
 	browsersync.init({
@@ -55,7 +54,7 @@ gulp.task("clean", function() {
  gulp.task("build", [ "concatScripts", "minifyScripts", "compileSass", "watch"], function() {
 
  });
-	
+
 gulp.task("default",["clean"], function() {
 	gulp.start("build");
 });
