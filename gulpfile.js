@@ -43,7 +43,7 @@ gulp.src("src/main.scss")
 .pipe(plugins.sourcemaps.write("./"))
 .pipe(gulp.dest("css"))
 // allows automatic css injecting
-.pipe(plugins.livereload({start: true}));
+.pipe(plugins.livereload());
 });
 
 // watch task to watch for changes to css, js, html
