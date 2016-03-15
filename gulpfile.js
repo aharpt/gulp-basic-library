@@ -9,8 +9,8 @@ gulp.task("webserver", function() {
 	gulp.src("./")
 	.pipe(plugins.webserver({
 		livereload: true,
-		directoryListing: true,
-		open: true
+		open: true,
+		fallback: "index.html"
 	}));
 });
 
@@ -30,7 +30,8 @@ gulp.task("minifyScripts", ["concatScripts"], function(){
 	// .pipe(plugins.sourcemaps.init())
 	.pipe(plugins.uglify())
 	// .pipe(plugins.sourcemaps.write("./"))
-	 .pipe(gulp.dest("js"));
+	 .pipe(gulp.dest("js"))
+	 .pipe(plugins.livereload());
 });
 
 // compile sass Automatically
