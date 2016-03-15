@@ -49,7 +49,7 @@ gulp.src("src/main.scss")
 // watch task to watch for changes to css, js, html
 gulp.task("watch",["compileSass", "minifyScripts", "concatScripts"], function(){
 	// browsersync
-	plugins.livereload.listen({port: 4000});
+	plugins.livereload.listen();
 	// watch sass/js for changes
 	gulp.watch("src/main.scss", ["compileSass"]);
 	gulp.watch("js/production.js", ["concatScripts"]);
