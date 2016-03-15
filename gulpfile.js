@@ -4,6 +4,17 @@ var plugins = require("gulp-load-plugins")({DEBUG: true});
 var clean = require("del");
 
 
+// gulp webserver
+gulp.task("webserver", function() {
+	gulp.src("./")
+	.pipe(plugins.webserver({
+		livereload: true,
+		directoryListing: true,
+		open: true
+	}));
+});
+
+
 // Concat javascript and put into a file named production.js in the js folder
 gulp.task('concatScripts', function() {
 	return gulp.src('src/*.js')
@@ -50,7 +61,7 @@ gulp.task("clean", function() {
 	clean(["dist", "css/main.css", "js/production.js*", "production/production.min.js"]);
 });
 
- gulp.task("build", [ "concatScripts", "minifyScripts", "compileSass", "watch"], function() {
+ gulp.task("build", ["webserver", "concatScripts", "minifyScripts", "compileSass", "watch"], function() {
 
  });
 
