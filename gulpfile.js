@@ -6,7 +6,7 @@ var clean = require("del");
 
 // gulp webserver
 gulp.task("webserver", function() {
-	gulp.src("./public/")
+	gulp.src("./")
 	.pipe(plugins.webserver({
 		livereload: true,
 		directoryListing: true,
