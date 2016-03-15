@@ -10,4 +10,7 @@ h1 {
   display: -ms-flexbox;
   display: flex; }
 
+h1 {
+  color: blue; }
+
 /*# sourceMappingURL=main.css.map */
