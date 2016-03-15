@@ -1,1 +1,1 @@
-var name="Aaron",nam=hello;document.write("heading");
+var name="Aaron",nam=hello;document.write("Heading");
