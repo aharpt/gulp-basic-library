@@ -19,7 +19,7 @@
 (Check http://blog.teamtreehouse.com/ and search for "node" or "npm" for how to install node, npm.)
 3. Clone project from github
 4. Run "npm install" in the root directory of your project to install all uninstalled node dependancies
-4. If you need to install any module manually you can go to http://gulpjs.com/plugins/ for live-reload https://www.npmjs.com/package/gulp-livereload.
+4. If you need to install any module manually you can go to http://gulpjs.com/plugins/ and for live-reload https://www.npmjs.com/package/gulp-livereload.
 
 ## Project Setup
 ### For CSS/SASS
