@@ -15,11 +15,11 @@
 
 ## Installation
 1. Make sure git is installed ("git --version") if not, you can look at this link https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
-1. Make sure node and npm are installed by running "node --version" and "npm --version"
+2. Make sure node and npm are installed by running "node --version" and "npm --version"
 (Check http://blog.teamtreehouse.com/ and search for "node" or "npm" for how to install node, npm.)
-1. Clone project from github
-2. Run "npm install" in the root directory of your project to install all uninstalled node dependancies
-3. If you need to install any module manually you can go to http://gulpjs.com/plugins/ and for browser-sync https://www.browsersync.io/docs/gulp/.
+3. Clone project from github
+4. Run "npm install" in the root directory of your project to install all uninstalled node dependancies
+4. If you need to install any module manually you can go to http://gulpjs.com/plugins/ for live-reload https://www.npmjs.com/package/gulp-livereload.
 
 ## Project Setup
 ### For CSS/SASS
