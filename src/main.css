@@ -2,18 +2,15 @@ h2 {
   color: red; }
 
 h2 {
-  color: red; }
+  color: blue; }
 
 h1 {
-  font-size: 50%; }
+  font-size: 100%; }
 
 h1 {
   color: green; }
 
 h1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex; }
 
 h1 {
