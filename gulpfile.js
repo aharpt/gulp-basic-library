@@ -21,7 +21,8 @@ gulp.task('concatScripts', function() {
 	  .pipe(plugins.sourcemaps.init())
 .pipe(plugins.concat('production.js'))
   .pipe(plugins.sourcemaps.write("./"))
-.pipe(gulp.dest('js'));
+.pipe(gulp.dest('js'))
+ .pipe(plugins.livereload());
 });
 
 // minify javascript and put into a keep it at production.js in the js folder
@@ -31,7 +32,6 @@ gulp.task("minifyScripts", ["concatScripts"], function(){
 	.pipe(plugins.uglify())
 	// .pipe(plugins.sourcemaps.write("./"))
 	 .pipe(gulp.dest("js"))
-	 .pipe(plugins.livereload());
 });
 
 // compile sass Automatically
@@ -53,9 +53,9 @@ gulp.task("watch",["compileSass", "minifyScripts", "concatScripts"], function(){
 	plugins.livereload.listen();
 	// watch sass/js for changes
 	gulp.watch("src/main.scss", ["compileSass"]);
-	gulp.watch("js/production.js", ["concatScripts"]);
+	// gulp.watch("js/production.js", ["concatScripts"]);
 	// watch html for changes to inject in browsersync
-	gulp.watch("./*.html");
+	// gulp.watch("./*.html");
 	// plugins.livereload.changed("./", 3000);
 });
 

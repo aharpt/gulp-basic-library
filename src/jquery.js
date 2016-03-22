@@ -1,4 +1,4 @@
-var name = "Aaron";
-var nam = hello;
+var firstname = "Aaron";
+var lastName = "Harpt";
 
-document.write("heading");
+document.write("headings");
