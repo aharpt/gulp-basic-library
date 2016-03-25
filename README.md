@@ -11,7 +11,7 @@
 
 ### Gulp-livereload with webserver
 1. automatically creates a web server to view your site
-2. automatically updates your page when sass changes are made
+2. automatically updates your page when sass or javascript changes are made
 
 ## Installation
 1. Make sure git is installed ("git --version") if not, you can look at this link https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
