@@ -55,10 +55,6 @@ gulp.task("watch",["compileSass", "minifyScripts", "concatScripts"], function(){
 	gulp.watch("src/*.js", ["concatScripts", "minifyScripts"]);
 });
 
-// gulp.task("clean", function() {
-// 	clean(["dist", "css/main.css", "js/production.js*", "production/production.min.js"]);
-// });
-
  gulp.task("build", ["webserver", "concatScripts", "minifyScripts", "compileSass", "watch"], function() {
 
  });
