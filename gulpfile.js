@@ -48,12 +48,6 @@ gulp.task("minifyScripts", ["concatScripts"], function(){
  .pipe(plugins.livereload());
  });
 
-
-
-
-
-
-
 // watch task to watch for changes to sass and js
 gulp.task("watch",["compileSass", "minifyScripts", "concatScripts"], function(){
 	plugins.livereload.listen();
