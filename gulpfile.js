@@ -75,7 +75,6 @@ gulp.task("watch",["compileSass", "minifyScripts", "concatScripts"], function(){
 	gulp.watch("src/*.scss", ["compileSass"]);
 	gulp.watch("src/*.js", ["concatScripts", "minifyScripts"]);
 	// watch html for changes to inject in browsersync
-	// gulp.watch("./*.html");
 	// plugins.livereload.changed("./", 3000);
 });
 
