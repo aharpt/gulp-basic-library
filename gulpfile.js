@@ -1,7 +1,6 @@
 // requiring gulp and gulp plugins
 var gulp = require("gulp");
 var plugins = require("gulp-load-plugins")({DEBUG: true});
-var clean = require("del");
 
 
 // gulp webserver
@@ -56,14 +55,14 @@ gulp.task("watch",["compileSass", "minifyScripts", "concatScripts"], function(){
 	gulp.watch("src/*.js", ["concatScripts", "minifyScripts"]);
 });
 
-gulp.task("clean", function() {
-	clean(["dist", "css/main.css", "js/production.js*", "production/production.min.js"]);
-});
+// gulp.task("clean", function() {
+// 	clean(["dist", "css/main.css", "js/production.js*", "production/production.min.js"]);
+// });
 
  gulp.task("build", ["webserver", "concatScripts", "minifyScripts", "compileSass", "watch"], function() {
 
  });
 
-gulp.task("default",["clean"], function() {
+gulp.task("default", function() {
 	gulp.start("build");
 });
