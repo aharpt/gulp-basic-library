@@ -1,1 +1,1 @@
-{"version":3,"sources":["jquery.js"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA","file":"production.js","sourcesContent":["var firstname = \"Aaron\";\nvar lastName = \"Harpt\";\n\ndocument.write(\"heading\");\n"],"sourceRoot":"/source/"}
+{"version":3,"sources":["jquery.js"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA","file":"production.js","sourcesContent":["var firstname = \"Aaron\";\nvar lastName = \"Harpt\";\n\ndocument.write(\"headings\");\n"],"sourceRoot":"/source/"}

@@ -35,24 +35,11 @@ gulp.task("minifyScripts", ["concatScripts"], function(){
 	 .pipe(plugins.livereload());
 });
 
-// compile sass Automatically
-// gulp.task("compileSass", function(){
-// gulp.src("src/main.scss")
-// .pipe(plugins.sourcemaps.init())
-// // autoprefixer to add prefixes for older browsers
-// .pipe(plugins.autoprefixer())
-// .pipe(plugins.sass())
-// .pipe(plugins.sourcemaps.write("./"))
-// .pipe(gulp.dest("css"))
-// // allows automatic css injecting
-// .pipe(plugins.livereload());
-// });
-
 //compile sass Automatically
  gulp.task("compileSass", function(){
  gulp.src("src/main.scss")
  .pipe(plugins.sourcemaps.init())
-// // autoprefixer to add prefixes for older browsers
+//  autoprefixer to add prefixes for older browsers
  .pipe(plugins.autoprefixer())
  .pipe(plugins.sass())
  .pipe(plugins.sourcemaps.write("./"))
@@ -67,15 +54,12 @@ gulp.task("minifyScripts", ["concatScripts"], function(){
 
 
 
-// watch task to watch for changes to css, js, html
+// watch task to watch for changes to sass and js
 gulp.task("watch",["compileSass", "minifyScripts", "concatScripts"], function(){
-	// browsersync
 	plugins.livereload.listen();
 	// watch sass/js for changes
 	gulp.watch("src/*.scss", ["compileSass"]);
 	gulp.watch("src/*.js", ["concatScripts", "minifyScripts"]);
-	// watch html for changes to inject in browsersync
-	// plugins.livereload.changed("./", 3000);
 });
 
 gulp.task("clean", function() {
