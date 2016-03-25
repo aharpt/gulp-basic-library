@@ -32,6 +32,7 @@ gulp.task("minifyScripts", ["concatScripts"], function(){
 	.pipe(plugins.uglify())
 	// .pipe(plugins.sourcemaps.write("./"))
 	 .pipe(gulp.dest("js"))
+	 .pipe(plugins.livereload());
 });
 
 // compile sass Automatically
@@ -72,7 +73,7 @@ gulp.task("watch",["compileSass", "minifyScripts", "concatScripts"], function(){
 	plugins.livereload.listen();
 	// watch sass/js for changes
 	gulp.watch("src/*.scss", ["compileSass"]);
-	// gulp.watch("js/production.js", ["concatScripts"]);
+	gulp.watch("src/*.js", ["concatScripts", "minifyScripts"]);
 	// watch html for changes to inject in browsersync
 	// gulp.watch("./*.html");
 	// plugins.livereload.changed("./", 3000);
