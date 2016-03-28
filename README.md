@@ -24,7 +24,8 @@
 ## Project Setup
 ### For CSS/SASS
 1. You must name your main sass file main.scss
-2. main.scss must be in src/ in relation to your gulpfile
+2. All partial files must be in the same folder as the main.scss file
+3. main.scss must be in src/ in relation to your gulpfile
 
 ### For Javascript
 1. All of your files before they are concatenated and minifying into a single file must be in src/ in relation to the gulp file
