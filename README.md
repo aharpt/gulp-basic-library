@@ -1,37 +1,31 @@
 # Basic Gulp Starter Theme:
-## What is included
-### For CSS/SASS
- 1. Compiling and watching your sass, (you don't have to rerun gulp after every sass change)
- 2. SASS sourcemaps
- 3. Autoprefixer for advanced CSS features such as flexbox, transitions, etc.
-
-### For Javascript
-1. javascript concatenation
-2. javascript minification
-
-### Gulp-livereload with webserver
-1. automatically creates a web server to view your site
-2. automatically updates your page when sass or javascript changes are made
-
-## Installation
+## Prerequisites:
 1. Make sure git is installed ("git --version") if not, you can look at this link https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
-2. Make sure node and npm are installed by running "node --version" and "npm --version"
-(Check http://blog.teamtreehouse.com/ and search for "node" or "npm" for how to install node, npm.)
-3. Clone project from github
-4. Run "npm install" in the root directory of your project to install all uninstalled node dependancies
-4. If you need to install any module manually you can go to http://gulpjs.com/plugins/ and for live-reload https://www.npmjs.com/package/gulp-livereload.
+2. Install homebrew by going to their website http://brew.sh/. You can also check if you already have it installed by running "brew --version"
+3. Node and npm must also be installed.  You can run "node --version" and "npm --version" to check if they are installed.  If not install using Homebrew (installed in step 2) by running "brew install node".  That command will install both node and npm.
 
-## Project Setup
-### For CSS/SASS
-1. You must name your main sass file main.scss
-2. All Sass partial files must be in the same folder as the main.scss file
-3. main.scss must be in src/ in relation to your gulpfile
+## How to use:
+1. Clone framework by running "git clone https://github.com/AaronMatthewHarpt/gulp-basic-framework.git"
+2. run "gulp" in the root directory of your clone and watch everything happen!
 
-### For Javascript
-1. All of your files before they are concatenated and minifying into a single file must be in src/ in relation to the gulp file
+### Framework Functionalities
+**CSS/SASS:**
++ Automatic SCSS compilation: Equipped with automatic SCSS compiling, our gulp framework
+watches your SCSS files and converts any changes to CSS.
++ SCSS Source Maps: To make their SCSS code cleaner, many developers create several small files, which they combine using import rules. However, when showing the file location of a CSS rule, most browser developer tools reference the large production file, not the small development ones. To fix the problem, our Gulp framework creates a CSS map file, causing your developer tools to reference the small development files. Overall, SCSS source maps let you work with small SCSS files so your code is easier to debug.
++ CSS Autoprefixer: Vender prefixes broaden your site’s audience, but manually entering them takes time. Our framework automatically inserts the prefixes needed for many browsers.
 
-## NOTES:
-1. My folder structure is an example of what your project could look like. It does not need  to be exactly like mine, but the Project Setup instructions are necessary for this to work.
-2. This will only work with versions of gulp under version 4 which is going to be released at some point soon. Here is a link to its progress: https://github.com/gulpjs/gulp/milestones
 
-###### If you find any issues with the program, you can submit a issue on the github repoitory.
+**JavaScript:**
++ JavaScript Concatenation: Many JavaScript files means many HTTP requests, hurting your site’s page speed. On the other hand, large files make your code more difficult to handle. Our framework’s JavaScript concatenation feature combines your manageable development files into a large production file, giving you both speed and manageability.
++ JavaScript Minification: Unnecessary characters, lines, or files slow down your site. Our framework minifies your JavaScript, eliminating spaces, comments, and other characters from the production file while leaving your development files intact.
+
+**Web Server with Live Reload:**
++ Web Server: When you run “Gulp” in your site’s root directory, our framework automatically creates a virtual server. At the same time, the framework loads the site in your browser, allowing you to preview it as if it were live.
++ Live Reload: The virtual server mentioned above lets you preview your site in {real time}. The server automatically reloads the site whenever you change SASS or JavaScript, allowing you to see how the new code changes your site.
+
+
+
+**Notes:**
++ Our framework works with every released version of Gulp. I plan to modify the framework for Gulp 4 (currently in development), and will post a link to it on this page once it is complete.
++ If you discover a problem with our framework, please feel free to submit an issue on the GitHub repository. Your discoveries help make our framework better!
